@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "conv-to-md"
+version = "0.1.0"
+description = ""
+authors = ["David Cho <david@cgoods.co.kr>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+bs4 = "^0.0.2"
+markdownify = "^0.11.6"
+html2text = "^2024.2.26"
+loguru = "^0.7.2"
+tqdm = "^4.66.2"
+click = "^8.1.7"
+code-print = "^0.1.0"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.3.0"
+autopep8 = "^2.1.0"
+autoflake = "^2.3.1"
+isort = "^5.13.2"
+pytest = "^8.1.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.poetry.scripts]
+conv_to_md = "conv_to_md:run_convert"
